@@ -1,6 +1,8 @@
 
 package lab3;
 
+import java.util.Objects;
+
 /**
  *
  * @author Adm
@@ -8,11 +10,21 @@ package lab3;
 public class Computer extends Node implements Identifiable, Storage{
     private String ipAddress;
     private int storageCapacity;
+    
+    private String unitOfStorageCapacity;
 
     public Computer(String ipAddress, int storageCapacity, String name, String location, String hardwareAddress) {
         super(name, location, hardwareAddress);
         this.ipAddress = ipAddress;
         this.storageCapacity = storageCapacity;
+    }
+
+    public String getUnitOfStorageCapacity() {
+        return unitOfStorageCapacity;
+    }
+
+    public void setUnitOfStorageCapacity(String unitOfStorageCapacity) {
+        this.unitOfStorageCapacity = unitOfStorageCapacity;
     }
     
     
@@ -42,7 +54,7 @@ public class Computer extends Node implements Identifiable, Storage{
 
     @Override
     public String toString() {
-        return "Computer{name=" + name + ", ipAddress=" + ipAddress + ", storageCapacity=" + storageCapacity + '}';
+        return name + ", location:" + location + ", ipAddress:" + ipAddress + ", storageCapacity:" + storageCapacity + ", unitOfStorageCapacity:" + unitOfStorageCapacity;
     }
     
     
