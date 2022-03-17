@@ -17,7 +17,7 @@ public class Network {
 
     @Override
     public String toString() {
-        return "Network{" + "nodes=" + nodes + '}';
+        return "Nodes in the network are:" + nodes + ".";
     }
     
     
