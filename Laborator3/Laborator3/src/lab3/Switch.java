@@ -12,7 +12,7 @@ public class Switch extends Node{
     }
     
     public String toString(){
-        return  "Switch{name=" + name + ", location=" + location + ", hardwareAddress=" + hardwareAddress + "}";
+        return name + ", location:" + location + ", hardwareAddress:" + hardwareAddress;
     }
     
 }
