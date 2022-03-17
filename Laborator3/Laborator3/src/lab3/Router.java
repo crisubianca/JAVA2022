@@ -22,7 +22,7 @@ public class Router extends Node implements Identifiable{
 
     @Override
     public String toString() {
-        return "Router{" + "ipAddress=" + ipAddress + '}';
+        return name + ", location:" + location + ", ipAddress:" + ipAddress;
     }
     
     
