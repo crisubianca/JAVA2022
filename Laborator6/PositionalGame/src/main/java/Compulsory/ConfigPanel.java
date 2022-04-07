@@ -1,5 +1,6 @@
 package Compulsory;
 
+import java.awt.event.ActionEvent;
 import javax.swing.*;
 import java.awt.*;
 /**
@@ -31,6 +32,13 @@ public class ConfigPanel extends JPanel {
         add(spinner1);
         add(spinner2);
         add(createBtn, BorderLayout.CENTER);
+        
+        //configure listener for create button
+        createBtn.addActionListener(this::createGame);
+    }
+    
+    private void createGame(ActionEvent e){
+        
     }
 
     public void setRows(int rows) {
