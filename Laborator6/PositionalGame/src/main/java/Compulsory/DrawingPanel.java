@@ -68,8 +68,8 @@ public class DrawingPanel extends JPanel{
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, canvasWidth, canvasHeight);
         paintGrid(g);
-        //paintSticks(g);
-        //paintStones(g);
+        paintSticks(g);
+        paintStones(g);
     }
     
     private void paintGrid(Graphics2D g){
@@ -101,6 +101,14 @@ public class DrawingPanel extends JPanel{
               g.drawOval(x - stoneSize / 2, y - stoneSize / 2, stoneSize, stoneSize);
            }
         }
+    }
+    
+    private void paintSticks(Graphics2D g){
+        
+    }
+    
+    private void paintStones(Graphics2D g){
+        
     }
     
     @Override
