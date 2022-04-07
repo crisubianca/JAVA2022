@@ -7,7 +7,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 
 public class DrawingPanel extends JPanel{
@@ -85,8 +84,14 @@ public class DrawingPanel extends JPanel{
         }
         
         //vertical lines
-        
-        
+        for(int col = 0; col < cols; col++){
+           int x1 = padY;
+           int y1 = padX + col * cellWidth;
+           int x2 = padY + boardHeight;
+           int y2 = y1;
+           g.drawLine(y1, x2, y2, x1);
+        }
+         
         //intersections
         for(int row = 0; row < rows; row++){
            for(int col = 0; col < cols; col++){
