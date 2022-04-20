@@ -8,13 +8,14 @@ import java.util.List;
 public class Player implements Runnable {
     private String name;
     private Game game;
+    private boolean running;
 
     Player(String name) {
         this.name = name;
     }
 
     private boolean createSubmitWord() throws InterruptedException {
-        List extracted = game.getBag().extractLetters(1);
+        List extracted = game.getBag().extractLetters(7);
         if (extracted.isEmpty()) {
             return false;
         }
