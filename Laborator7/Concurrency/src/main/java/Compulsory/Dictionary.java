@@ -15,7 +15,7 @@ class Dictionary {
 
     Dictionary() throws FileNotFoundException {
         words = new ArrayList<String>();
-        Scanner reader = new Scanner(new FileReader("resurse/dictionar.txt"));
+        Scanner reader = new Scanner(new FileReader("resurse/words.txt"));
         String word;
         while( reader.hasNext()) {
             word = reader.next();
