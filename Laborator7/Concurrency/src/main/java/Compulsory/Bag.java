@@ -12,7 +12,7 @@ public class Bag {
     //declare a collection for tiles
     private final Queue<Character> letters = new LinkedList<>();
 
-    Bag() {
+    public Bag() {
         for( char c = 'a'; c <= 'z' ; ++c ) {
             //add a new tile to the collection
             letters.add(c);
