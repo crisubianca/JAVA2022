@@ -3,6 +3,7 @@ package database;
 import database.connections.MyDatabaseConn;
 import database.daos.*;
 import database.entities.*;
+import java.io.FileReader;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -48,5 +49,28 @@ public class DatabaseManager {
             throwable.printStackTrace();
         }
     }
+    
+    public static void loadData(String file, ContinentsDao continents, CountriesDao countries, CitiesDao cities){
+        int count = 0;
+        try{
+            FileReader filereader = new FileReader(file);
+            CSVReader csvReader = new CSVReader(filereader);
+            String[] nextLine;
+            csvReader.readNext();
+            while((nextLine = csvReader.readNext()) != null){
+                if(continents.findByName(nextLine[5]) == null){
+                    continents.create(new Continents(count, nextLine[5]));
+                }
+                countries.create(new Country(100 + count, nextLine[0], nextLine[4], continents.findByName(nextLine[5]).getId()));
+                cities.create(500 + count, nextLine[1], countries.findByName(nextLine[0]).getId(), 1 , Double.parseDouble(nextLine[]));
+                count ++;
+            }
+            
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    
     
 }
