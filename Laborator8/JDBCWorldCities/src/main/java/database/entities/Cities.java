@@ -14,14 +14,14 @@ public class Cities {
 
     private int capital;
     
-    private int latitude;
+    private float latitude;
     
-    private int longitude;
+    private float longitude;
 
     public Cities() {
     }
 
-    public Cities(int id, String name, int country, int capital, int latitude, int longitude) {
+    public Cities(int id, String name, int country, int capital, float latitude, float longitude) {
         this.id = id;
         this.name = name;
         this.country = country;
@@ -62,19 +62,19 @@ public class Cities {
         this.capital = capital;
     }
 
-    public int getLatitude() {
+    public float getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(int latitude) {
+    public void setLatitude(float latitude) {
         this.latitude = latitude;
     }
 
-    public int getLongitude() {
+    public float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(int longitude) {
+    public void setLongitude(float longitude) {
         this.longitude = longitude;
     }
 
