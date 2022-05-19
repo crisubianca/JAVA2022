@@ -1,5 +1,6 @@
 package database;
 
+import com.opencsv.CSVReader;
 import database.connections.MyDatabaseConn;
 import database.daos.*;
 import database.entities.*;
@@ -61,8 +62,8 @@ public class DatabaseManager {
                 if(continents.findByName(nextLine[5]) == null){
                     continents.create(new Continents(count, nextLine[5]));
                 }
-                countries.create(new Country(100 + count, nextLine[0], nextLine[4], continents.findByName(nextLine[5]).getId()));
-                cities.create(500 + count, nextLine[1], countries.findByName(nextLine[0]).getId(), 1 , Double.parseDouble(nextLine[]));
+                countries.create(new Countries(100 + count, nextLine[0], nextLine[4], continents.findByName(nextLine[5]).getId()));
+                cities.create(new Cities(500 + count, nextLine[1], countries.findByName(nextLine[0]).getId(), 1 , Double.parseDouble(nextLine[])));
                 count ++;
             }
             
