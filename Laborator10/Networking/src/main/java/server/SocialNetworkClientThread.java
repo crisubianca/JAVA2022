@@ -28,7 +28,7 @@ public class SocialNetworkClientThread extends Thread{
             do {
                 String request = input.readLine();
                 // Logica serverului
-                String response = request + " hello word!";
+                String response = request + " HELLO WORLD!";
                 output.println(response);
                 output.flush();
 
@@ -55,13 +55,13 @@ public class SocialNetworkClientThread extends Thread{
 
                 // register the name
 
-               output.println("registration-successful");
+               output.println("Registration made successfully!");
             }
             case "login" -> {
                 String name = input.readLine();
 
                 // check if the name exists and return the response
-                output.println("login-successful");
+                output.println("Login made successfully!");
             }
             case "friend" -> {
                 // check to see if the client is logged in, then execute
@@ -69,9 +69,9 @@ public class SocialNetworkClientThread extends Thread{
                 String name = null;
                 while ((name = input.readLine()) != null) {
                     // add the name to the friend list IF AND ONLY IF it exists;
-                    System.out.println("added friend " + name + " to the list of friends");
+                    System.out.println("Added friend " + name + " to the list of my friends!");
                 }
-                output.println("friend-successful");
+                output.println("Friend added successfully!");
             }
             case "message" -> {
                 String name = null;
@@ -79,13 +79,13 @@ public class SocialNetworkClientThread extends Thread{
                     // Verify that the friend exists!
                     System.out.println("Sent a message to friend " + name);
                 }
-                output.println("message-successful");
+                output.println("Message sent successfully!");
             }
             case "read" -> {
                 String messsage = null;
                 // Get each message based on the user's name
                 // connectedUser.getMessageAtIndex(i);
-                output.println("read-successful");
+                output.println("Reading message went successfully!");
             }
             case "stop" -> {
                 output.println("server-stop");
@@ -95,7 +95,7 @@ public class SocialNetworkClientThread extends Thread{
                 System.exit(0);
             }
             default -> {
-                output.println("bad-request");
+                output.println("!WARNING!Bad request!!");
             }
         }
         output.flush();
