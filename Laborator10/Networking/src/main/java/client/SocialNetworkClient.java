@@ -34,7 +34,7 @@ public class SocialNetworkClient {
 
         welcomeMessage();
         do {
-            System.out.print("Input command: ");
+            System.out.print("Insert your command: ");
             request = consoleInput.readLine();
             // System.out.println("Read the request: '" + request + "'");
 
@@ -44,12 +44,12 @@ public class SocialNetworkClient {
 
             // Wait for the response
             getResponse();
-        } while (!request.equals("stop"));
+        } while (!request.equals("Stop!!"));
     }
 
     private void welcomeMessage() {
         System.out.println("---------------------------------------------------------------");
-        System.out.println("\nHello and welcome to the FaceJava social network!\n");
+        System.out.println("\nHello and welcome to the network!\n");
         System.out.println("---------------------------------------------------------------");
     }
 
